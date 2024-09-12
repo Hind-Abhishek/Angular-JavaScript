@@ -1,0 +1,101 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(200, 15%, 8%);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.theme-switcher {
+    cursor: pointer;
+}
+
+/* Search and Filter Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 52%);
+    border-radius: 4px;
+}
+
+.filter-region {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 52%);
+    border-radius: 4px;
+}
+
+/* Country Cards */
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.country-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+}
+
+.flag {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.country-details {
+    padding: 20px;
+}
+
+.country-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.country-details p {
+    margin-bottom: 5px;
+}
+
+.details-btn, .back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: hsl(200, 15%, 8%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.details-btn:hover, .back-btn:hover {
+    text-decoration: underline;
+}

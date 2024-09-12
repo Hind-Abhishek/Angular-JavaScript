@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="countryApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="DetailController">
+
+  <!-- Header -->
+  <header>
+    <h1>Where in the world?</h1>
+    <div class="dark-mode-toggle">
+      <span>Dark Mode</span>
+    </div>
+  </header>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <a href="/">← Back</a>
+  </div>
+
+  <!-- Country Details -->
+  <section class="country-card" ng-if="country">
+    <img ng-src="{{country.flag}}" alt="{{country.name}} Flag" class="country-flag">
+    <div class="country-card-details">
+      <h2>{{country.name}}</h2>
+      <p><strong>Native Name:</strong> {{country.nativeName}}</p>
+      <p><strong>Population:</strong> {{country.population | number}}</p>
+      <p><strong>Region:</strong> {{country.region}}</p>
+      <p><strong>Sub Region:</strong> {{country.subregion}}</p>
+      <p><strong>Capital:</strong> {{country.capital}}</p>
+      <p><strong>Top Level Domain:</strong> {{country.topLevelDomain.join(', ')}}</p>
+      <p><strong>Currencies:</strong> {{country.currencies | currencyList}}</p>
+      <p><strong>Languages:</strong> {{country.languages | languageList}}</p>
+      <p><strong>Border Countries:</strong>
+        <span ng-repeat="border in country.borders">
+          <a href="#!/details/{{border}}">{{getCountryName(border)}}</a>
+        </span>
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
