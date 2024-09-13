@@ -23,7 +23,7 @@ This web application displays information about various countries using AngularJ
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:Hind-Abhishek/Angular-JavaScript.git
    cd <repository-directory>
    
 2. **Using http-server (Node.js)**
